@@ -4,14 +4,13 @@
 //
 //  Created by saba alrasheed on 12/06/1447 AH.
 //
-
 import SwiftUI
 
 @main
-struct StoryEmotionAppApp: App {
+struct StoryEmotionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
