@@ -11,7 +11,7 @@ import Combine
 // MARK: - App Entry
 
 @main
-struct StoryEmotionApp: App {
+struct ChooseStoryScreen: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
@@ -94,7 +94,7 @@ struct CategoryView: View {
                             Text(category.title)
                                 .font(.system(size: 18, weight: .medium))
                                 .foregroundColor(.black)
-                                .frame(width: 150, height: 100)   // ← مقاس Figma
+                                .frame(width: 150, height: 100)
                                 .background(Color.white)
                                 .cornerRadius(22)
                                 .shadow(color: Color.black.opacity(0.40),
@@ -119,9 +119,9 @@ struct CategoryView: View {
                 Color(red: 0.98, green: 0.97, blue: 0.95)
                     .ignoresSafeArea()
             )
-            .navigationBarBackButtonHidden(true)   // يخفي سهم الناف بار
-                
-            // 🔹 السهم اللي فوق يمين (حقك)
+            .navigationBarBackButtonHidden(true)
+            
+            
             Button(action: { dismiss() }) {
                 Image(systemName: "chevron.right")
                     .font(.system(size: 22, weight: .medium))
@@ -133,7 +133,7 @@ struct CategoryView: View {
     }
 }
 
-// MARK: - Story Screen بسيطة
+// MARK: - Story Screen
 
 struct StoryView: View {
     let title: String
@@ -185,7 +185,7 @@ struct PrimaryMenuButton: View {
         Text(title)
             .font(.system(size: 20, weight: .medium))
             .foregroundColor(.black)
-            .frame(width: 199, height: 146)     // ← تقريبًا نفس أبعاد زر Figma لكل مربع
+            .frame(width: 199, height: 146)
             .background(Color.white)
             .cornerRadius(26)
             .shadow(color: Color.black.opacity(0.18),
@@ -193,7 +193,7 @@ struct PrimaryMenuButton: View {
     }
 }
 
-// MARK: - ViewModels + Model (MVVM في نفس الملف)
+// MARK: - ViewModels + Model 
 
 class HomeViewModel: ObservableObject {
     let menuTitles = [
